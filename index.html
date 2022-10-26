@@ -8,12 +8,40 @@
 </head>
 <body>
 
+    Search<input type="text">
+
+    this is box
+    <select name="opt">
+        <option value="a">Plants</option>
+        <option value="b"></option>
+        <option value="c">souraabh</option>
+    </select>
+
     <h1>To-Do list</h1>
     <h2>About To-Do list</h2>
     <p>Her in To-Do list you can write up any type of task you want.
         It includes check boxes and crossing the texts.
         You make a group for sorting system for example a group for Plants.
     </p>
+
+    <p>
+        <h2>List</h4>
+        Group for plants 
+    </p>
+
+    private void button1_Click(object sender, EventArgs e)
+    {
+     List<int> myList = new List<int>();
+  
+     int myInt = 0;
+     
+     if (int.TryParse(this.TextBox1.Text,out myInt))
+     {
+      myList.Add(myInt);
+     }
+    }
+    
+
 
 </body>
 </html>
