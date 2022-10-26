@@ -8,15 +8,6 @@
 </head>
 <body>
 
-    Search<input type="text">
-
-    this is box
-    <select name="opt">
-        <option value="a">Plants</option>
-        <option value="b"></option>
-        <option value="c">souraabh</option>
-    </select>
-
     <h1>To-Do list</h1>
     <h2>About To-Do list</h2>
     <p>Her in To-Do list you can write up any type of task you want.
@@ -29,17 +20,14 @@
         Group for plants 
     </p>
 
-    private void button1_Click(object sender, EventArgs e)
-    {
-     List<int> myList = new List<int>();
-  
-     int myInt = 0;
-     
-     if (int.TryParse(this.TextBox1.Text,out myInt))
-     {
-      myList.Add(myInt);
-     }
-    }
+    <ul role="toolbar">
+        <li><button aria-setsize="4" aria-posinset="1">Button 1</button></li>
+        <li><button aria-setsize="4" aria-posinset="2">Button 2</button></li>
+        <li><button aria-setsize="4" aria-posinset="3">Button 3</button></li>
+        <li><button aria-setsize="4" aria-posinset="4">Button 4</button></li>
+    </ul>
+
+
     
 
 
