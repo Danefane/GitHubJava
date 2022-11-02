@@ -20,16 +20,16 @@
         <h3>Group for flowers</h3>
     </p>
 
-    <!-- This is the list (above)-->
-    <br>
-    <label>Enter: </label>
-    <input type="text" name="" id="textBox" class="input-default"> 
-    <button type="button" onclick="Add()" class="ButtonList">Add</button>
+    <div id="divAdder" class="listAdd">
+        <h2>The TO-DO List</h2>
+        <input type="text" id="addInput" placeholder="Title...">
+        <span onclick="addClick()" class="addTitleAdd">Add</span>
+      </div>
+      
+      <ol id="ulList">
+      </ol> 
 
-    <ol type="1">
-    </ol>
-
-    <script type="text/javascript" src="script/script.js"></script>
+    <script type="text/javascript" src="script.js"></script>
 
 </body>
 </html>
