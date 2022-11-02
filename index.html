@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="/GitHubJava/GitHubJava/style.css">
+    <link rel="stylesheet" href="style.css">
 
 
 </head>
-<body>
+<body>  
 
     <h1>To-Do list</h1>
     <h2>About To-Do list</h2>
@@ -26,11 +26,18 @@
     <div id="divAdder" class="listAdd">
         <h2>The TO-DO List</h2>
         <input type="text" id="addInput" placeholder="Title...">
-        <span onclick="addClick()" class="addTitleAdd">Add</span>
+        <button onclick="addClick()" class="addTitleAdd">Add</button>
       </div>
       
       <ul id="ulList">
       </ul> 
+
+      <label class="container">
+        <input type="checkbox">
+        <input type="text" minlength="1" maxlength="100" size="60%" placeholder="Add an item">
+        <span class="checkmark"></span>
+        <br>   
+      </label>
 
     <script type="text/javascript" src="script.js"></script>
 
