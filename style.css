@@ -1,4 +1,6 @@
-li:before{
-    content: "Step ";
-    font-weight: bold;
-}
+body {
+    background-image: url("Nature-original.jpg");
+    background-color:brown;
+   }    
+
+   
