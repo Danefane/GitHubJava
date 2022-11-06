@@ -6,7 +6,6 @@ var textnode = document.createElement("p");
 textnode.innerText = input;
 document.getElementById("ulList").appendChild(option);
 option.appendChild(textnode);
-console.log("addClick")
 }
 
 
