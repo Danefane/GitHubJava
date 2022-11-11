@@ -1,41 +1,50 @@
-{/* <!-- This is the textbox--> */}
-function addClick(){
-var option = document.createElement("li");
-var input = document.getElementById("addInput").value;
-var textnode = document.createElement("p");
-textnode.innerText = input;
-document.getElementById("ulList").appendChild(option);
-option.appendChild(textnode);
-}
+// {/* <!-- This is the textbox--> */}
+// function addClick(){
+// var option = document.createElement("li");
+// var input = document.getElementById("addInput").value;
+// var textnode = document.createElement("p");
+// textnode.innerText = input;
+// document.getElementById("ulList").appendChild(option);
+// option.appendChild(textnode);
+// }
 
 
-// Create a "close" button and append it to each list item
-var myNodelist = document.getElementsByTagName("LI");
-var i;
-for (i = 0; i < myNodelist.length; i++) {
-  var span = document.createElement("SPAN");
-  var txt = document.createTextNode("\u00D7");
-  span.className = "close";
-  span.appendChild(txt);
-  myNodelist[i].appendChild(span);
-}
+let input = document.querySelector('.enterList');
+let addBtn = document.querySelector('.addList');
+let tasks = document.querySelector('.task');
 
+// add btn disabled
 
-// Click on a close button to hide the current list item
-var close = document.getElementsByClassName("close");
-var i;
-for (i = 0; i < close.length; i++) {
-  close[i].onclick = function() {
-    var div = this.parentElement;
-    div.style.display = "none";
+input.addEventListener('keyup', () => {
+    if(input.value.trim() !== 0){
+    } else {
+        addBtn.classList.remove('active')
+    }
+})
+
+// add new item to list
+
+addBtn.addEventListener('click', () => {
+  if (InputDeviceInfo.value.trim() !== 0) {
+    let newItem = document.createElement('div');
+    newItem.classList.add('item');
+    newItem.innerHTML = `
+    <p> $(input.value) </p>
+    <div class="item-btn">
+      <i class="fa-solid fa-pen-to-square"></i>
+      <i class="fa-solid fa-xmark"></i>
+    </div>
+    `
+    tasks.appendChild(newItem);
+    input.value = '';
+  } else {
+      alert('Please enter a task')
   }
-}
+} )
 
+// delete item from list
 
-// Add a "checked" symbol when clicking on a list item
-var list = document.querySelector('ul');
-list.addEventListener('click', function(ev) {
-  if (ev.target.tagName === 'LI') {
-    ev.target.classList.toggle('checked');
-  }
-}, false);
+tasks.addEventListener('click', (e) => {
+  if (e.target.classList.contains('fa-xmark'))
+      e.target.parentElement.parentElement.remove();
+})
