@@ -1,1 +1,1 @@
-This is a TO-DO list. This helps you list all the task for youself, included check boxes. Groups are available for different type of tasks you want to do
+This is a TO-DO list. This helps you list all the task for youself, included check boxes.
